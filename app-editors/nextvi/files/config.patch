@@ -1,0 +1,48 @@
+diff --git a/ex.c b/ex.c
+index 15e5046..ddd132a 100644
+--- a/ex.c
++++ b/ex.c
+@@ -2,7 +2,8 @@ int xleft;			/* the first visible column */
+ int xvis;			/* startup flags */
+ int xai = 1;			/* autoindent option */
+ int xic = 1;			/* ignorecase option */
+-int xhl = 1;			/* syntax highlight option */
++int xclrcol = 79;		/* vim color column type stuff */
++int xhl = 0;			/* syntax highlight option */
+ int xhll;			/* highlight current line */
+ int xhlw;			/* highlight current word */
+ int xhlp;			/* highlight {}[]() pair */
+diff --git a/vi.c b/vi.c
+index 167a597..086e569 100644
+--- a/vi.c
++++ b/vi.c
+@@ -25,7 +25,7 @@
+ 
+ int vi_hidch;			/* show hidden chars */
+ int vi_lncol;			/* line numbers cursor offset */
+-static int vi_lnnum;		/* line numbers */
++static int vi_lnnum=8;		/* line numbers */
+ /* screen redraw - bit 1: whole screen, bit 2: current line, bit 3: update vi_col */
+ static int vi_mod;
+ static char vi_word_m[] = "\0leEwW";	/* line word navigation */
+@@ -41,7 +41,7 @@ static int vi_col;			/* the column requested by | command */
+ static int vi_scrollud;			/* scroll amount for ^u and ^d */
+ static int vi_scrolley;			/* scroll amount for ^e and ^y */
+ static int vi_cndir = 1;		/* ^n direction */
+-static int vi_status;			/* permanent status bar */
++static int vi_status = 2;			/* permanent status bar */
+ static int vi_tsm;			/* type of the status message */
+ static int vi_nlword;			/* new line mode for eEwWbB */
+ 
+diff --git a/vi.h b/vi.h
+index 0c984c0..c422af4 100644
+--- a/vi.h
++++ b/vi.h
+@@ -406,6 +406,7 @@ extern int xleft;
+ extern int xvis;
+ extern int xai;
+ extern int xic;
++extern int xclrcol;
+ extern int xhl;
+ extern int xhll;
+ extern int xhlw;
