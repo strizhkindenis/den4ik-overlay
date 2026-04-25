@@ -10,6 +10,9 @@ KEYWORDS="~amd64 ~arm64"
 PATCHES=(
 	"${FILESDIR}"/config.patch
 )
+RDEPEND="
+	app-eselect/eselect-vi
+"
 
 src_compile() {
 	./cbuild.sh build
@@ -19,4 +22,14 @@ src_install() {
 	dobin vi
 	doman vi.1
 	dodoc README
+}
+
+pkg_postinst() {
+	einfo "Updating ${EPREFIX}/usr/bin/vi symlink"
+	eselect vi update --if-unset
+}
+
+pkg_postrm() {
+	einfo "Updating ${EPREFIX}/usr/bin/vi symlink"
+	eselect vi update --if-unset
 }
