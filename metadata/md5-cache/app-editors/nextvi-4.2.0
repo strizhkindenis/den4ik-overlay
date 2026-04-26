@@ -1,9 +1,10 @@
-DEFINED_PHASES=compile install
+DEFINED_PHASES=compile install postinst postrm
 DESCRIPTION=A small vi/ex terminal text editor (neatvi rewrite)
 EAPI=8
 HOMEPAGE=https://github.com/kyx0r/nextvi
 KEYWORDS=~amd64 ~arm64
 LICENSE=MIT
+RDEPEND=app-eselect/eselect-vi
 SLOT=0
 SRC_URI=https://github.com/kyx0r/nextvi/archive/refs/tags/4.2.0.tar.gz -> nextvi-4.2.0.tar.gz
-_md5_=217028319fb75872f3e9d4d018699aaf
+_md5_=636834e7e69cb5d73c697e9f5edc48eb

@@ -19,7 +19,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin vi
+	newbin vi nextvi
 	doman vi.1
 	dodoc README
 }
