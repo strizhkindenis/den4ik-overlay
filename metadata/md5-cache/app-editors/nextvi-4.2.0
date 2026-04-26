@@ -7,4 +7,4 @@ LICENSE=MIT
 RDEPEND=app-eselect/eselect-vi
 SLOT=0
 SRC_URI=https://github.com/kyx0r/nextvi/archive/refs/tags/4.2.0.tar.gz -> nextvi-4.2.0.tar.gz
-_md5_=636834e7e69cb5d73c697e9f5edc48eb
+_md5_=a7090a59872d493bf7c50fa6c0cc71ab
