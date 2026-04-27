@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure
+DESCRIPTION=Highly efficient and highly scalable direct eigensolvers for symmetric matrices
+EAPI=8
+HOMEPAGE=https://elpa.mpcdf.mpg.de/
+IUSE=openmp mpi cpu_flags_x86_sse cpu_flags_x86_avx cpu_flags_x86_avx2 cpu_flags_x86_avx512 cpu_flags_x86_sve128 cpu_flags_x86_sve256 cpu_flags_x86_sve512
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=sys-devel/gcc[fortran] mpi? ( virtual/mpi[fortran,threads,cxx] sci-libs/scalapack ) openmp? ( sys-devel/gcc[openmp] )
+SLOT=0
+SRC_URI=https://elpa.mpcdf.mpg.de/software/tarball-archive/Releases/2026.02.001/elpa-2026.02.001.tar.gz
+_md5_=5d18f2accc54848eaa3b0a589673da29

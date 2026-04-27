@@ -1,0 +1,13 @@
+BDEPEND=mpi? ( virtual/mpi ) !mpi? ( sys-devel/gcc[fortran] )
+DEFINED_PHASES=compile configure install
+DEPEND=blas_openblas? ( sci-libs/openblas )
+DESCRIPTION=Package for generating maximally-localized Wannier functions
+EAPI=8
+HOMEPAGE=https://wannier.org
+IUSE=+blas_openblas mpi
+KEYWORDS=~amd64
+LICENSE=GPL-2
+REQUIRED_USE=^^ ( blas_openblas )
+SLOT=0
+SRC_URI=https://github.com/wannier-developers/wannier90/archive/refs/tags/v3.1.0.tar.gz -> wannier90-3.1.0.tar.gz
+_md5_=f59a013eb0ed9640184bfa5ae6388535

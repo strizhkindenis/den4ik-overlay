@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig app-alternatives/ninja >=dev-build/cmake-3.28.5 fortran? ( virtual/fortran )
+DEFINED_PHASES=compile configure install postinst prepare setup test
+DEPEND=sci-libs/fftw:3.0=[mpi?,openmp?] virtual/blas virtual/lapack elpa? ( sci-libs/elpa[mpi?,openmp?] ) hdf5? ( sci-libs/hdf5:=[fortran,mpi?] ) libxc? ( >=sci-libs/libxc-5.1.2:=[fortran] ) mpi? ( virtual/mpi ) scalapack? ( sci-libs/scalapack ) fortran? ( virtual/fortran )
+DESCRIPTION=A suite of codes for electronic-structure calculations and modeling
+EAPI=8
+HOMEPAGE=https://www.quantum-espresso.org/
+INHERIT=cmake flag-o-matic fortran-2
+IUSE=elpa fortran hdf5 libxc mpi openmp scalapack test wannier90
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=sci-libs/fftw:3.0=[mpi?,openmp?] virtual/blas virtual/lapack elpa? ( sci-libs/elpa[mpi?,openmp?] ) hdf5? ( sci-libs/hdf5:=[fortran,mpi?] ) libxc? ( >=sci-libs/libxc-5.1.2:=[fortran] ) mpi? ( virtual/mpi ) scalapack? ( sci-libs/scalapack ) fortran? ( virtual/fortran )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://gitlab.com/QEF/q-e/-/archive/qe-7.5/q-e-qe-7.5.tar.bz2 -> quantum-espresso-7.5.tar.bz2
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	flag-o-matic	fd3558f73f6503093adee69adf41020d	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	ninja-utils	d063ea1900a793f93eb095010d6d9156	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	cmake	3395ce6618fc5c7af03335471b896644	fortran-2	ae6d43513003405bd4a48698fc20370a
+_md5_=57f931ee9cbcb5d3df66b1990bd89d3a
